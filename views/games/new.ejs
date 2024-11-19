@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Game</title>
+</head>
+<body>
+    <h1>Create a new game</h1>
+    <form action="/games" method="POST">
+        <label>Name:</label>
+        <input name="name" type="text"/>
+        <label>Is it in stock?</label>
+        <input name="isInStock" type="checkbox"/>
+        <button tyoe ="submit">Add Game</button>
+    </form>
+    <a href="/games/">Back to Games</a>
+</body>
+</html>

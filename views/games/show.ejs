@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Show page</title>
+</head>
+
+<body>
+    <h1>
+        <%= game.name %>
+    </h1>
+    <% if (game.isInStock){ %>
+        <p>This game is in stock!</p>
+        <%} else {%>
+            <p>This game is not in stock!</p>
+            <% } %>
+    <form action="/games/<%=game.id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete <%= game.name %></button>
+    </form>
+    <a href="/games/<%= game._id %>/edit">Edit <%= game.name %>
+    <a href="/games/">Back to games</a>
+</body>
+
+</html>
